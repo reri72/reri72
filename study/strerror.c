@@ -10,7 +10,7 @@ int main(void){
     if (filetest == NULL)
         printf("not exist >> %s (%d) \n", strerror(errno), errno);
     else
-        pclose(filetest);
+        fclose(filetest);
 
     return 0;
 }
