@@ -5,7 +5,7 @@ int main(void){
 
     const char* test1 = "Hello World!";
     char test2[20] = "Hi World!";
-    char test3[20] = "Bye\n World \0!";    // 줄바꿈도 1로 침
+    char test3[20] = "Bye\n World \0!";    // \0도 1로 침
 
     int a = strlen(test1);
     int b = strlen(test2);
