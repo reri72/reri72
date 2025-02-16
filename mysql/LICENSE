@@ -1,0 +1,10 @@
+# MySQL Client Library Study Project
+
+This project is a study project using MySQL C API to connect and interact with a MySQL database.
+
+## License
+
+This project is licensed under the [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+
+The MySQL Client Library used in this project is also licensed under the GPLv2.
+
