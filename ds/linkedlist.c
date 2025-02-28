@@ -33,6 +33,16 @@ Node *create_node(int key)
     return node;
 }
 
+void free_node(Node *node)
+{
+    if (node)
+    {
+        node->key = 0;
+        node->next = NULL;
+        free(node);
+    }
+}
+
 void insert_node(List *list, Node *newnode)
 {
     if (list->size >= list->max)
@@ -92,7 +102,7 @@ void delete_node(List *list, int key)
                     list->tail = prev;
             }
 
-            free(tmp);
+            free_node(tmp);
             list->size--;
             return;
         }
@@ -136,7 +146,7 @@ void destroy_list(List **list)
     while (tmp != NULL)
     {
         Node *next = tmp->next;
-        free(tmp);
+        free_node(tmp);
         tmp = next;
     }
     

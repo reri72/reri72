@@ -18,6 +18,7 @@ typedef struct List
 
 int init_list(List **list, int max);
 Node *create_node(int key);
+void free_node(Node *node);
 void insert_node(List *list, Node *newnode);
 void delete_node(List *list, int key);
 void print_list(List *list);
