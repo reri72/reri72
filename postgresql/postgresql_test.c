@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 #include <libpq-fe.h>
 
@@ -32,9 +33,16 @@ PGresult *exec_query(PGconn *conn, const char *query)
     return res;
 }
 
+void set_con_info(char *conninfo, char *dbname, char *user, char *passwd, char *host, uint16_t port)
+{
+    snprintf(conninfo, 1024, "dbname=%s user=%s password=%s host=%s port=%u", 
+                dbname, user, passwd, host, port);
+}
+
 int main(int argc, char *argv[])
 {
-    const char *conninfo = "dbname=postgres user=postgres password=wnfjdwnfjd host=localhost port=5432";
+    char conninfo[1024] = {0,};
+    set_con_info(conninfo, "postgres", "postgres", "helloworld", "localhost", 5432);
     const char *query = "select * from newtable;";
     
     PGconn *conn = dbcon(conninfo);
