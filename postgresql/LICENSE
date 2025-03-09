@@ -1,0 +1,9 @@
+# Postgresql Client Library Study Project
+
+This project is a study project using Postgresql C API to connect and interact with a Postgresql database.
+
+## License
+
+PostgreSQL is released under the PostgreSQL License, a liberal Open Source license, similar to the BSD or MIT licenses.
+
+https://www.postgresql.org/about/licence/
