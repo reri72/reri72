@@ -1,0 +1,29 @@
+1. 기본 개발 도구 설치
+# 패키지 업데이트 후 파이썬 개발 패키지 설치
+sudo dnf check-update
+sudo dnf install -y python3 python3-pip python3-devel
+
+# C/C++ 기반 패키지 빌드를 위한 개발 도구 그룹 설치
+sudo dnf groupinstall -y "Development Tools"
+
+# 설치 확인
+python3 --version
+pip3 --version
+
+
+
+
+
+2. 가상환경 설정
+# 작업 폴더 생성 후 해당 폴더로 이동하여 가상환경 설정
+# venv 모듈 기본 포함
+python3 -m venv venv
+source venv/bin/activate
+
+
+
+
+
+3. 정상 동작 확인 테스트
+echo "print('Hello, Rocky Linux Python')" > test.py
+python test.py
