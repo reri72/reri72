@@ -1,0 +1,23 @@
+1. dnf 로 Go 설치 (Rocky 9.8 기준)
+]# dnf install -y golang
+
+2. Go 버전 확인
+]# go version
+
+3. 프로젝트 생성 및 Go 모듈 초기화
+]# mkdir hello && cd hello
+]# go mod init hello
+go: creating new go.mod: module hello
+
+go.mod 라는 파일이 생기는데
+프로젝트마다 독립적인 공간을 보장하고
+다른 오픈소스와의 버전 충돌을 막기 위해 프로젝트 폴더마다 반드시 go.mod 파일이 하나씩 존재해야 함
+
+
+4. go 파일 작성 후
+    4.1. 바로 실행
+        ]# go run main.go
+    4.2. 컴파일 후 실행
+        ]# go build -o hello main.go
+        ]# ./hello
+
